@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>∑(っ°Д°;)っ卧槽，不见了</title>
+    <style>
+        * {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background-image: url(back.png);
+            background-size: 100%;
+        }
+
+        .bu {
+            display: flex;
+            height: 100%;
+        }
+
+        input {
+            border: solid 1px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        #btn {
+            color: #fff;
+            background: #3385ff;
+            border: none;
+            border-bottom: 1px solid #2d78f4;
+        }
+
+        .bu div {
+            display: flex;
+            border: solid 2px #fff;
+            margin: auto;
+            overflow: hidden;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bu">
+        <div>
+            <input class="search-txt" type='text' id='inp' />
+            <input class="search-btn" type='button' id='btn' value='点击搜索' />
+        </div>
+    </div>
+</body>
+<script>
+    var oInp = document.getElementById('inp');
+    var oBtn = document.getElementById('btn');
+
+    oBtn.onclick = function () {
+        Search();
+    }
+
+
+    document.onkeydown = function () {
+        if (event.keyCode == 13) {
+            Search();
+        }
+    }
+
+    function Search() {
+        var url = 'https://www.baidu.com/s?wd=' + oInp.value;
+        window.open(url);
+    }
+</script>
+
+</html>
